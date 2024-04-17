@@ -1,0 +1,8 @@
+increase, decrease, total, scores, _  = get_stats(
+    c=3,
+    dfs=dfs_total_normalized, 
+    df_g=dfs_g_normalized,
+    init_params='random',
+    covariance_type='tied'
+) -> gives spikes at 2001, 2004, 2009, 2010, 2012, 2021
+
