@@ -1,0 +1,39 @@
+### Methodology
+
+The methodology section of this report outlines the procedures and analytical techniques employed to investigate the clustering of countries based on their GDP and trade volume. This analysis aims to reveal how economic classifications change in response to global events over the period from 2000 to 2021. The following subsections detail the data collection, preprocessing, choice of clustering algorithms, validation metrics, and the tools used for analysis.
+
+#### Data Collection
+
+**Sources**: The data for this study were sourced from several international economic databases including the World Bank, the International Monetary Fund (IMF), and the United Nations Comtrade database. These sources provide comprehensive and reliable data on countries' annual GDP and trade volumes.
+
+**Scope**: The dataset includes annual figures for GDP and trade volume for over 190 countries from the year 2000 to 2021. This time frame was chosen to capture the economic impact of several significant global events, including the 9/11 attacks, the 2008 financial crisis, the European debt crisis, and the COVID-19 pandemic.
+
+#### Data Preprocessing
+
+**Cleaning**: Initial data cleaning involved handling missing values, removing outliers, and verifying the integrity of the data. Missing values were addressed through imputation methods based on the median values of neighboring countries in similar economic brackets.
+
+**Normalization**: To ensure that the GDP and trade volume data were comparable across different scales, we normalized these metrics using the min-max scaling technique. This transformation adjusts the data to a common scale without distorting differences in the ranges of values.
+
+#### Clustering Algorithms
+
+**K-Means Clustering**: We employed K-Means clustering for its efficiency and effectiveness in grouping data into k distinct clusters. The number of clusters (k) was initially estimated using the Elbow Method, which helps to determine the optimal number of clusters by identifying the point where the decrease in the sum of squared distances between data points and their assigned cluster's centroid starts diminishing.
+
+**Hierarchical Clustering**: This method was used to complement the K-Means approach by providing a hierarchical structure for cluster analysis, which is valuable for understanding the multi-level relationships in the data. The dendrogram produced from this analysis helped in visualizing and deciding the cut-off level for defining clusters.
+
+**Gaussian Mixture Models (GMM)**: To account for variances in cluster shapes and sizes, GMM was applied as it assumes a mixture of Gaussian distributions. This model is particularly useful for identifying less distinct clusters and for probabilistic cluster assignment, which provides insights into the confidence of the classifications.
+
+#### Cluster Validation
+
+**Silhouette Score**: To assess the quality of the clusters formed by the different algorithms, the silhouette score was calculated for each clustering solution. This metric evaluates how similar a data point is to its own cluster compared to other clusters, providing a measure of the appropriateness of the cluster assignments.
+
+**Cross-validation**: Stability and robustness of clustering were further validated through cross-validation techniques, involving repeated random sub-sampling. This process helped ensure that the clustering results were consistent and not dependent on any particular partition of data.
+
+#### Analytical Tools
+
+**Software**: The entire data analysis process was conducted using Python, leveraging libraries such as pandas for data manipulation, scikit-learn for machine learning, and Matplotlib and Seaborn for data visualization. Python’s robust ecosystem allows for efficient handling of large datasets and complex analyses, making it ideal for this study.
+
+**Statistical Analysis**: Descriptive statistics were calculated to provide basic information on the datasets, and inferential statistics were used to interpret the data and make conclusions about the economic implications of the cluster shifts.
+
+### Conclusion of Methodology
+
+This methodology provides a comprehensive framework for analyzing the dynamic clustering of countries based on economic indicators. By employing multiple clustering algorithms and validation techniques, the study ensures a thorough and reliable analysis of how global events influence economic classifications. The next section will present the results of the clustering analysis, detailing the movements of countries between clusters and discussing the potential economic implications of these movements.
